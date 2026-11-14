@@ -143,8 +143,8 @@ script = ExtResource("2_h2yge")
 position = Vector2(-4.66745, -28.999939)
 scale = Vector2(0.13, 0.15999998)
 sprite_frames = SubResource("SpriteFrames_v1u5u")
-animation = &"Down Walk"
-frame_progress = 0.8209277
+animation = &"Up Walk"
+frame_progress = 0.9700517
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="Player" unique_id=1680076149]
 position = Vector2(-1.5558385, -16.999939)

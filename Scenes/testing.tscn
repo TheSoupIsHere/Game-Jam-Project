@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bkiobmx1bybxd"]
 
-[ext_resource type="Script" uid="uid://mx6xv87huutu" path="res://Scripts/globle.gd" id="1_irbir"]
+[ext_resource type="Script" uid="uid://mx6xv87huutu" path="res://Scripts/global.gd" id="1_irbir"]
 [ext_resource type="Script" uid="uid://bopt4ce8tdgdn" path="res://Scripts/room.gd" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://wkt41p0d3p0n" path="res://Scripts/movement.gd" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c5df3uvcqj4f" path="res://art folder/Tileset v2.png" id="4_lquwl"]
