@@ -1,12 +1,12 @@
 [gd_scene format=4 uid="uid://bkiobmx1bybxd"]
 
-[ext_resource type="Script" uid="uid://mx6xv87huutu" path="res://globle.gd" id="1_5vw27"]
+[ext_resource type="Script" uid="uid://mx6xv87huutu" path="res://Scripts/globle.gd" id="1_irbir"]
 [ext_resource type="Script" uid="uid://bopt4ce8tdgdn" path="res://Scripts/room.gd" id="3_1bvp3"]
-[ext_resource type="Script" uid="uid://wkt41p0d3p0n" path="res://Scripts/player.gd" id="3_lquwl"]
+[ext_resource type="Script" uid="uid://wkt41p0d3p0n" path="res://Scripts/movement.gd" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c5df3uvcqj4f" path="res://art folder/Tileset v2.png" id="4_lquwl"]
 [ext_resource type="Script" uid="uid://bdop17io81nwu" path="res://Scripts/ballbounce.gd" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://3qxgea5mlv84" path="res://art folder/Bouncy ball.png" id="6_7mycd"]
-[ext_resource type="Script" uid="uid://dys8128asyr0r" path="res://turningsprites.gd" id="6_kek77"]
+[ext_resource type="Script" uid="uid://dys8128asyr0r" path="res://Scripts/turningsprites.gd" id="6_kek77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
 texture = ExtResource("4_lquwl")
@@ -140,7 +140,7 @@ height = 240.0
 radius = 27.01839
 
 [node name="Node2D" type="Node2D" unique_id=1753384981]
-script = ExtResource("1_5vw27")
+script = ExtResource("1_irbir")
 
 [node name="fourWayRoom2" type="StaticBody2D" parent="." unique_id=1860591980]
 position = Vector2(-4129, 0)
