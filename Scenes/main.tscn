@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0peeglf2f61b"]
 
 [ext_resource type="Script" uid="uid://5aeo2hq42o0j" path="res://Scripts/player.gd" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://bu0l5uyvq8y5g" path="res://Scenes/map_loader.gd" id="3_8gbba"]
+[ext_resource type="Script" uid="uid://bu0l5uyvq8y5g" path="res://Scripts/map_loader.gd" id="3_8gbba"]
 [ext_resource type="Texture2D" uid="uid://chk7qxr45lswy" path="res://art folder/Woofly front.png" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://xiaciut1a2k8" path="res://Scripts/room_generator.gd" id="4_jjvhh"]
 
