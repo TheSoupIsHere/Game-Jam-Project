@@ -10,7 +10,7 @@ func _physics_process(delta):
 		speed = 2000
 		stamina -= 1 / delta
 	else:
-		
+		stamina += 2 / delta
 	velocity = input_dir * speed
 	
 	
