@@ -5853,3 +5853,5 @@ tile_set = SubResource("TileSet_plsnm")
 
 [node name="room_generator" type="Node" parent="." unique_id=2131949829]
 script = ExtResource("2_cqmjg")
+
+[node name="Player (temporary)" type="CharacterBody2D" parent="." unique_id=1204722182]
