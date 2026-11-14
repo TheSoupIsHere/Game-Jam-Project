@@ -1,5 +1,5 @@
 class_name RoomGenerator
-extends Node2D
+extends Node
 
 @export var map_size : int = 7;
 @export var rooms_to_generate : int = 12;
@@ -17,6 +17,13 @@ var first_room : Room
 
 func _ready():
 	_generate()
+	
+	for x in range(map_size):
+		var line : String
+		for y in range(map_size):
+			line += "# " if _get_map(x, y) == true else "0 "
+		print(line)
+			
 
 func _generate():
 	room_count = 0
