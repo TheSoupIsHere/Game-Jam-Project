@@ -195,3 +195,4 @@ shape = SubResource("CapsuleShape2D_jva71")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2092588428]
 scale = Vector2(9.279838, 11.940474)
+zoom = Vector2(0.1, 0.1)
