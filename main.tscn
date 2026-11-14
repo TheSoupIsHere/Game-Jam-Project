@@ -65,6 +65,9 @@ texture_region_size = Vector2i(258, 252)
 tile_size = Vector2i(258, 252)
 sources/1 = SubResource("TileSetAtlasSource_5vw27")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5d6l"]
+size = Vector2(477.5, 999.5)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("4_lquwl")
 margins = Vector2i(205, 142)
@@ -158,6 +161,10 @@ position = Vector2(4128, 3988)
 rotation = -1.5707964
 scale = Vector2(1, -1)
 polygon = PackedVector2Array(-36, -7, -36, 1802, 466, 1806, 457, 519, 1715, 516.99994, 1720, -2.0000205)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fourWayRoom2" unique_id=231188430]
+position = Vector2(2571.25, 1768.25)
+shape = SubResource("RectangleShape2D_h5d6l")
 
 [node name="LWayRoom" type="StaticBody2D" parent="." unique_id=517739324]
 script = ExtResource("3_1bvp3")
