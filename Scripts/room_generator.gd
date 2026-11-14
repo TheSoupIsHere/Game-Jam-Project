@@ -1,6 +1,7 @@
 class_name RoomGenerator
 extends Node
 
+
 @onready var player = $"../Player"
 
 @export var map_size : int = 7;
@@ -25,7 +26,14 @@ func _ready():
 	for x in range(map_size):
 		var line : String
 		for y in range(map_size):
-			line += "[]" if _get_map(x, y) == true else "  "
+			var new_char = ""
+			if _get_map(x, y) and (exit == [x, y]):
+				new_char = "XX"
+			elif _get_map(x, y):
+				new_char = "[]"
+			else:
+				new_char = "  "
+			line += new_char
 		print(line)
 
 func _generate():
@@ -69,6 +77,13 @@ func _check_room(x : int, y : int, direction : Vector2, is_first_room : bool = f
 func _instantiate_rooms():
 	pass
 	
+func _get_neighbors(x : int, y : int):
+	var up = _get_map(x, y - 1)
+	var down = _get_map(x, y + 1)
+	var left = _get_map(x - 1, y)
+	var right = _get_map(x + 1, y)
+	return [up, down, left, right]
+
 func _get_map(x : int, y : int):
 	return map[x + y * map_size]
 	
