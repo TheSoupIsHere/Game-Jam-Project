@@ -126,6 +126,7 @@ script = ExtResource("2_cqmjg")
 
 [node name="Player (temporary)" type="CharacterBody2D" parent="." unique_id=1204722182]
 position = Vector2(744, 976)
+script = ExtResource("5_8fk20")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player (temporary)" unique_id=1355467871]
 scale = Vector2(0.28, 0.28)
