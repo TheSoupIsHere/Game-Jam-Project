@@ -6655,5 +6655,3 @@ shape = SubResource("RectangleShape2D_5r5ld")
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=513336011]
 position = Vector2(-135, 15)
 shape = SubResource("RectangleShape2D_4lbud")
-
-[node name="Room_Generator" type="Node" parent="." unique_id=748826996]

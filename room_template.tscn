@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://by6c0015kk76f"]
 
+[ext_resource type="Script" uid="uid://bopt4ce8tdgdn" path="res://room.gd" id="1_457cn"]
+[ext_resource type="Script" uid="uid://xiaciut1a2k8" path="res://room_generator.gd" id="2_cqmjg"]
+
 [node name="Node2D" type="Node2D" unique_id=1784317243]
 
 [node name="Room Template" type="StaticBody2D" parent="." unique_id=1350168051]
+script = ExtResource("1_457cn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Room Template" unique_id=1628175926]
+
+[node name="room_generator" type="Node" parent="." unique_id=2131949829]
+script = ExtResource("2_cqmjg")
