@@ -13,6 +13,8 @@ var first_x : int = 3;
 var first_y : int = 3;
 var first_room : Room
 
+@onready var room_set : Array[Area2D] = [$fourWayRoom2, $LWayRoom]
+
 @export var player : CharacterBody2D
 
 func _ready():
