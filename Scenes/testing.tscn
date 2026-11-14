@@ -4,9 +4,9 @@
 [ext_resource type="Script" uid="uid://bopt4ce8tdgdn" path="res://Scripts/room.gd" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://wkt41p0d3p0n" path="res://Scripts/movement.gd" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c5df3uvcqj4f" path="res://art folder/Tileset v2.png" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://art folder/woofly front walk/animated_sprite_2d.tscn" id="5_irbir"]
 [ext_resource type="Script" uid="uid://bdop17io81nwu" path="res://Scripts/ballbounce.gd" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://3qxgea5mlv84" path="res://art folder/Bouncy ball.png" id="6_7mycd"]
-[ext_resource type="Script" uid="uid://dys8128asyr0r" path="res://Scripts/turningsprites.gd" id="6_kek77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
 texture = ExtResource("4_lquwl")
@@ -193,10 +193,10 @@ position = Vector2(-791.99994, 991.9999)
 scale = Vector2(2.571, 2)
 script = ExtResource("3_lquwl")
 
-[node name="forward" type="Sprite2D" parent="CharacterBody2D" unique_id=1799831195]
-position = Vector2(-6.223633, -30.689941)
-scale = Vector2(0.13, 0.15997069)
-script = ExtResource("6_kek77")
+[node name="ani" parent="CharacterBody2D" unique_id=361740621 instance=ExtResource("5_irbir")]
+scale = Vector2(0.13, 0.15999997)
+animation = &"Right Walk"
+frame_progress = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1680076149]
 shape = SubResource("CapsuleShape2D_jva71")
