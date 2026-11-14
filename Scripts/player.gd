@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var speed = 1000
+var stamina = 100
 var front
 var left
 var right
