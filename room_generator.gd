@@ -41,6 +41,15 @@ func _check_room(x : int, y : int, direction : Vector2, is_first_room : bool = f
 	var go_south : bool = randf() > (0.2 if direction == Vector2.DOWN else 0.8)
 	var go_west : bool = randf() > (0.2 if direction == Vector2.LEFT else 0.8)
 	var go_east : bool = randf() > (0.2 if direction == Vector2.RIGHT else 0.8)
+	
+	if go_north or is_first_room:
+		_check_room(x, y - 1, Vector2.UP if is_first_room else direction)
+	if go_south or is_first_room:
+		_check_room(x, y + 1, Vector2.DOWN if is_first_room else direction)
+	if go_west or is_first_room:
+		_check_room(x - 1, y, Vector2.UP if is_first_room else direction)
+	if go_east or is_first_room:
+		_check_room(x + 1, y, Vector2.UP if is_first_room else direction)
 
 func _instantiate_rooms():
 	pass
