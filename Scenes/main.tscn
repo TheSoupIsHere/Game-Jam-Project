@@ -19,18 +19,10 @@ script = ExtResource("2_h2yge")
 
 [node name="AnimatedSprite2D" parent="Player" unique_id=361740621 instance=ExtResource("2_jjvhh")]
 position = Vector2(-4.66745, -28.999939)
-scale = Vector2(0.13, 0.15999998)
-sprite_frames = SubResource("SpriteFrames_v1u5u")
-animation = &"Up Walk"
-frame_progress = 0.5913383
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="Player" unique_id=1680076149]
 position = Vector2(-1.5558385, -16.999939)
 shape = SubResource("CapsuleShape2D_jva71")
-
-[node name="sprint cd" type="Timer" parent="Player" unique_id=744842419]
-wait_time = 3.0
-one_shot = true
 
 [node name="Map Loader" type="Node2D" parent="." unique_id=112547903]
 script = ExtResource("3_8gbba")
@@ -43,4 +35,3 @@ zoom = Vector2(0.2, 0.2)
 [node name="Node" type="Node" parent="." unique_id=1743536054]
 script = ExtResource("4_jjvhh")
 
-[connection signal="timeout" from="Player/sprint cd" to="Player" method="_on_sprint_cd_timeout"]
