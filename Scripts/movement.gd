@@ -4,6 +4,8 @@ extends CharacterBody2D
 var speed = 1000
 
 func _physics_process(delta):
+	Globle.global_player_position = global_position
+	
 	Globle.input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	if Globle.input_dir.x < 0:
