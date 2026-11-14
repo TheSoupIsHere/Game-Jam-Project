@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Game Jam Project"
-run/main_scene="uid://b0peeglf2f61b"
+run/main_scene="uid://bkiobmx1bybxd"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Globle="*uid://mx6xv87huutu"
+Global="*uid://mx6xv87huutu"
 
 [display]
 

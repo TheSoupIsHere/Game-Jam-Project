@@ -32,6 +32,5 @@ position = Vector2(-791.99994, 991.9999)
 scale = Vector2(23.858463, 23.880947)
 zoom = Vector2(0.2, 0.2)
 
-[node name="Node" type="Node" parent="." unique_id=1743536054]
+[node name="Room generator" type="Node" parent="." unique_id=1743536054]
 script = ExtResource("4_jjvhh")
-

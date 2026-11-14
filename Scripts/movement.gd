@@ -3,8 +3,11 @@ extends CharacterBody2D
 @onready var _animation_player = $ani
 var speed = 1000
 
-func _physics_process(delta):
+func _process(delta):
 	Globle.global_player_position = global_position
+
+func _physics_process(delta):
+	
 	
 	Globle.input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
