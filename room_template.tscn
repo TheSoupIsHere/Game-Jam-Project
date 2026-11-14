@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bopt4ce8tdgdn" path="res://room.gd" id="1_457cn"]
 [ext_resource type="Script" uid="uid://xiaciut1a2k8" path="res://room_generator.gd" id="2_cqmjg"]
 [ext_resource type="Texture2D" uid="uid://c5df3uvcqj4f" path="res://art folder/Tileset v2.png" id="2_wrsj0"]
+[ext_resource type="Texture2D" uid="uid://chk7qxr45lswy" path="res://art folder/Woofly front.png" id="4_ghoic"]
+[ext_resource type="Script" uid="uid://bsmxws00siv25" path="res://movement.gd" id="5_8fk20"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghoic"]
 texture = ExtResource("2_wrsj0")
@@ -64,9 +66,14 @@ texture_region_size = Vector2i(258, 252)
 tile_size = Vector2i(258, 252)
 sources/1 = SubResource("TileSetAtlasSource_ghoic")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jva71"]
+radius = 525.0
+height = 1528.5713
+
 [node name="Node2D" type="Node2D" unique_id=1784317243]
 
 [node name="LWayRoom" type="StaticBody2D" parent="." unique_id=1350168051]
+visible = false
 script = ExtResource("1_457cn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="LWayRoom" unique_id=1628175926]
@@ -81,10 +88,9 @@ polygon = PackedVector2Array(-681, -2, -673, 519, 84, 534, 94, 3274, -2486, 3276
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LWayRoom/TileMapLayer/Area2D" unique_id=1109254935]
 position = Vector2(-3000, 0)
-polygon = PackedVector2Array(-36, -7, -5, 1768, 512, 1752, 497, 497, 1825, 498, 1825, -7)
+polygon = PackedVector2Array(-36, -7, -20, 1519, 511, 1498, 511, 512, 1825, 498, 1825, -7)
 
 [node name="fourWayRoom2" type="StaticBody2D" parent="." unique_id=1815114687]
-visible = false
 script = ExtResource("1_457cn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="fourWayRoom2" unique_id=201658170]
@@ -96,13 +102,13 @@ position = Vector2(3000, 0)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="fourWayRoom2/TileMapLayer/Area2D" unique_id=59025946]
 position = Vector2(-3000, 0)
-polygon = PackedVector2Array(-36, -7, -5, 1768, 512, 1752, 515, 764, 1807, 751, 1825, -7)
+polygon = PackedVector2Array(-36, -7, -3, 1523, 511, 1519, 515, 764, 1807, 751, 1825, -7)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="fourWayRoom2/TileMapLayer/Area2D" unique_id=196569233]
 position = Vector2(1105, 0)
 rotation = 3.1415927
 scale = Vector2(1, -1)
-polygon = PackedVector2Array(-36, -7, -5, 1768, 512, 1752, 515, 764, 1807, 751, 1825, -7)
+polygon = PackedVector2Array(-36, -7, -15, 1519, 489.99976, 1494, 515, 764, 1807, 751, 1825, -7)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="fourWayRoom2/TileMapLayer/Area2D" unique_id=770731681]
 position = Vector2(-3000, 3988)
@@ -119,3 +125,14 @@ polygon = PackedVector2Array(-36, -7, -36, 1802, 466, 1806, 457, 519, 1715, 516.
 script = ExtResource("2_cqmjg")
 
 [node name="Player (temporary)" type="CharacterBody2D" parent="." unique_id=1204722182]
+position = Vector2(744, 976)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player (temporary)" unique_id=1355467871]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("4_ghoic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player (temporary)" unique_id=1576692191]
+position = Vector2(5, 61)
+scale = Vector2(0.28, 0.28)
+shape = SubResource("CapsuleShape2D_jva71")
+script = ExtResource("5_8fk20")
