@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://by6c0015kk76f"]
+
+[node name="Node2D" type="Node2D" unique_id=1784317243]
+
+[node name="Room Template" type="StaticBody2D" parent="." unique_id=1350168051]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Room Template" unique_id=1628175926]
