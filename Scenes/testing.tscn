@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bopt4ce8tdgdn" path="res://Scripts/room.gd" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://5aeo2hq42o0j" path="res://Scripts/player.gd" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c5df3uvcqj4f" path="res://art folder/Tileset v2.png" id="4_lquwl"]
-[ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://art folder/woofly front walk/animated_sprite_2d.tscn" id="5_irbir"]
+[ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://Scenes/animated_sprite_2d.tscn" id="5_irbir"]
 [ext_resource type="Script" uid="uid://bdop17io81nwu" path="res://Scripts/ballbounce.gd" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://3qxgea5mlv84" path="res://art folder/Bouncy ball.png" id="6_7mycd"]
 

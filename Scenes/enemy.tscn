@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c5df3uvcqj4f" path="res://art folder/Tileset v2.png" id="2_8cim4"]
 [ext_resource type="Script" uid="uid://wkt41p0d3p0n" path="res://Scripts/movement.gd" id="3_7x82w"]
 [ext_resource type="Script" uid="uid://dby6unqk4o6i4" path="res://Scripts/enemy.gd" id="3_iatxd"]
-[ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://art folder/woofly front walk/animated_sprite_2d.tscn" id="4_iatxd"]
+[ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://Scenes/animated_sprite_2d.tscn" id="4_iatxd"]
 [ext_resource type="Texture2D" uid="uid://bgwaojf6hqbg" path="res://art folder/guard front walk/Guard_Front-2.png" id="4_qqxsh"]
 [ext_resource type="Texture2D" uid="uid://chk7qxr45lswy" path="res://art folder/Woofly front.png" id="5_qqxsh"]
 [ext_resource type="Texture2D" uid="uid://b5k2fyo65gmey" path="res://art folder/woofly front walk/Woofly_Front-1 2.png" id="6_0whn2"]
@@ -285,8 +285,7 @@ script = ExtResource("3_7x82w")
 position = Vector2(-1.5558386, -37.500122)
 scale = Vector2(0.13, 0.15999997)
 sprite_frames = SubResource("SpriteFrames_7xmqa")
-animation = &"Right Walk"
-frame_progress = 0.1715644
+frame_progress = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2" unique_id=938601998]
 shape = SubResource("CapsuleShape2D_8w0mm")

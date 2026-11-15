@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://b0peeglf2f61b"]
 
-[ext_resource type="Script" uid="uid://b2o0yn07qan54" path="res://Scenes/map_loader.gd" id="1_kry3j"]
 [ext_resource type="Script" uid="uid://5aeo2hq42o0j" path="res://Scripts/player.gd" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://art folder/woofly front walk/animated_sprite_2d.tscn" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://Scenes/animated_sprite_2d.tscn" id="2_jjvhh"]
 [ext_resource type="Script" uid="uid://bu0l5uyvq8y5g" path="res://Scripts/map_loader.gd" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dt8kef72lwm80" path="res://Scenes/rooms.tscn" id="5_kry3j"]
 
@@ -11,7 +10,7 @@ radius = 30.338379
 height = 169.00006
 
 [node name="Node2D" type="Node2D" unique_id=1753384981]
-script = ExtResource("1_kry3j")
+script = ExtResource("3_8gbba")
 
 [node name="Node2D" parent="." unique_id=1784317243 instance=ExtResource("5_kry3j")]
 position = Vector2(-2064, -2011)

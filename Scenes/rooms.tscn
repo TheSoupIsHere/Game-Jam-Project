@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dt8kef72lwm80"]
 
 [ext_resource type="Script" uid="uid://xiaciut1a2k8" path="res://Scripts/room_generator.gd" id="1_1gecx"]
-[ext_resource type="Script" uid="uid://bdva0wuuvmv4k" path="res://Scenes/room_controller.gd" id="1_i8ier"]
+[ext_resource type="Script" uid="uid://bdva0wuuvmv4k" path="res://Scripts/room_controller.gd" id="1_i8ier"]
 [ext_resource type="Script" uid="uid://bopt4ce8tdgdn" path="res://Scripts/room.gd" id="2_i8ier"]
 [ext_resource type="Texture2D" uid="uid://c5df3uvcqj4f" path="res://art folder/Tileset v2.png" id="3_ohuli"]
 
