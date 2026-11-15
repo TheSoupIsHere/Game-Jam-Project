@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn4qqi2cgxq6c"
-path="res://.godot/imported/Woofly_Back-1.png-f93f1d2f1f181485e0d56d2379ea3a96.ctex"
+uid="uid://c76bahqayocbb"
+path="res://.godot/imported/Woofly_Right-2 2.png-2d2425f42d9f60fe28db77784cf23efc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art folder/woofly back walk/Woofly_Back-1.png"
-dest_files=["res://.godot/imported/Woofly_Back-1.png-f93f1d2f1f181485e0d56d2379ea3a96.ctex"]
+source_file="res://art folder/woofly right walk/Woofly_Right-2 2.png"
+dest_files=["res://.godot/imported/Woofly_Right-2 2.png-2d2425f42d9f60fe28db77784cf23efc.ctex"]
 
 [params]
 

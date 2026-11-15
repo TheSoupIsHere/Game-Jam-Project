@@ -7,11 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://art folder/woofly front walk/animated_sprite_2d.tscn" id="5_irbir"]
 [ext_resource type="Script" uid="uid://bdop17io81nwu" path="res://Scripts/ballbounce.gd" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://3qxgea5mlv84" path="res://art folder/Bouncy ball.png" id="6_7mycd"]
-[ext_resource type="Script" uid="uid://dby6unqk4o6i4" path="res://Scripts/enemy.gd" id="8_17ygw"]
-[ext_resource type="Texture2D" uid="uid://k0a1qptui4xg" path="res://art folder/guard front walk/Guard_Front-1.png" id="9_4u8n4"]
-[ext_resource type="Texture2D" uid="uid://bgwaojf6hqbg" path="res://art folder/guard front walk/Guard_Front-2.png" id="10_2343q"]
-[ext_resource type="Texture2D" uid="uid://yk558e8y4u5j" path="res://art folder/guard front walk/Guard_Front-3.png" id="11_xi0es"]
-[ext_resource type="Texture2D" uid="uid://cx6vmr66xr1b7" path="res://art folder/guard front walk/Guard_Front-4.png" id="12_o38ri"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
 texture = ExtResource("4_lquwl")
@@ -76,7 +71,7 @@ sources/1 = SubResource("TileSetAtlasSource_5vw27")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5d6l"]
 size = Vector2(477.5, 999.5)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_irbir"]
 texture = ExtResource("4_lquwl")
 margins = Vector2i(205, 142)
 texture_region_size = Vector2i(258, 252)
@@ -134,7 +129,7 @@ texture_region_size = Vector2i(258, 252)
 
 [sub_resource type="TileSet" id="TileSet_272bh"]
 tile_size = Vector2i(258, 252)
-sources/1 = SubResource("TileSetAtlasSource_7mycd")
+sources/1 = SubResource("TileSetAtlasSource_irbir")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jva71"]
 custom_solver_bias = 1.0
@@ -143,35 +138,6 @@ height = 240.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jva71"]
 radius = 27.01839
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_o7hox"]
-animations = [{
-"frames": [],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_4u8n4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_2343q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_xi0es")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_o38ri")
-}],
-"loop": 1,
-"name": &"front walk",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o7hox"]
-radius = 181.0
-height = 540.0
 
 [node name="Node2D2" type="Node2D" unique_id=1753384981]
 script = ExtResource("1_irbir")
