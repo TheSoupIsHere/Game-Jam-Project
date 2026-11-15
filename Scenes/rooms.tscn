@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dt8kef72lwm80"]
 
 [ext_resource type="Script" uid="uid://xiaciut1a2k8" path="res://Scripts/room_generator.gd" id="1_1gecx"]
-[ext_resource type="Script" uid="uid://bdva0wuuvmv4k" path="res://Scenes/room_controller.gd" id="1_i8ier"]
+[ext_resource type="Script" uid="uid://bdva0wuuvmv4k" path="res://Scripts/room_controller.gd" id="1_i8ier"]
 [ext_resource type="Script" uid="uid://bopt4ce8tdgdn" path="res://Scripts/room.gd" id="2_i8ier"]
 [ext_resource type="Texture2D" uid="uid://c5df3uvcqj4f" path="res://art folder/Tileset v2.png" id="3_ohuli"]
 
@@ -7454,7 +7454,7 @@ texture_region_size = Vector2i(258, 252)
 tile_size = Vector2i(258, 252)
 sources/0 = SubResource("TileSetAtlasSource_d2rwr")
 
-[node name="Node2D" type="Node2D" unique_id=1784317243]
+[node name="Node2D2" type="Node2D" unique_id=1784317243]
 script = ExtResource("1_i8ier")
 
 [node name="room_generator" type="Node" parent="." unique_id=2131949829]
