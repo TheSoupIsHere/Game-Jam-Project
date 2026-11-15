@@ -275,9 +275,8 @@ texture = ExtResource("4_qqxsh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1692886865]
 shape = SubResource("CapsuleShape2D_jva71")
-disabled = true
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=1441641687]
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=1441641687 groups=["Player"]]
 position = Vector2(-1051, -2822)
 scale = Vector2(2.571, 2)
 script = ExtResource("3_7x82w")
@@ -287,7 +286,7 @@ position = Vector2(-1.5558386, -37.500122)
 scale = Vector2(0.13, 0.15999997)
 sprite_frames = SubResource("SpriteFrames_7xmqa")
 animation = &"Right Walk"
-frame_progress = 0.6328674
+frame_progress = 0.1715644
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2" unique_id=938601998]
 shape = SubResource("CapsuleShape2D_8w0mm")
