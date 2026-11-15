@@ -141,7 +141,7 @@ position = Vector2(-2064, -2011)
 script = ExtResource("3_u50mg")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=796931992]
-position = Vector2(-791.99994, 991.9999)
+position = Vector2(2.999878, 14.000061)
 scale = Vector2(2.571, 2)
 motion_mode = 1
 wall_min_slide_angle = 0.0

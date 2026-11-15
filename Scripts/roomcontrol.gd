@@ -21,6 +21,6 @@ func _process(delta: float) -> void:
 	var next : bool = Input.is_action_just_pressed("Next Room")
 	if next:
 		print("next room triggered")
-		showing_room += 1
+		showing_room = (showing_room + 1) % len(rooms)
 		show_room(showing_room)
-		get_tree().reload_current_scene()
+		self.position
