@@ -43,7 +43,7 @@ func _generate():
 	print(rooms_to_generate)
 	
 	_check_room(first_x, first_y, Vector2.ZERO, true)
-	_instantiate_rooms()
+	_instantiate_rooms(first_x, first_y)
 
 func _check_room(x : int, y : int, direction : Vector2, is_first_room : bool = false):
 	if room_count >= rooms_to_generate:
@@ -74,7 +74,7 @@ func _check_room(x : int, y : int, direction : Vector2, is_first_room : bool = f
 	if room_count == rooms_to_generate - 1:
 		exit = [x, y]
 
-func _instantiate_rooms():
+func _instantiate_rooms(x: int, y: int):
 	pass
 	
 func _get_neighbors(x : int, y : int):
