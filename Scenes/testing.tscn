@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mx6xv87huutu" path="res://Scripts/global.gd" id="1_irbir"]
 [ext_resource type="Script" uid="uid://bopt4ce8tdgdn" path="res://Scripts/room.gd" id="3_1bvp3"]
-[ext_resource type="Script" uid="uid://wkt41p0d3p0n" path="res://Scripts/movement.gd" id="3_lquwl"]
+[ext_resource type="Script" uid="uid://5aeo2hq42o0j" path="res://Scripts/player.gd" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c5df3uvcqj4f" path="res://art folder/Tileset v2.png" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://art folder/woofly front walk/animated_sprite_2d.tscn" id="5_irbir"]
 [ext_resource type="Script" uid="uid://bdop17io81nwu" path="res://Scripts/ballbounce.gd" id="5_lquwl"]
@@ -139,7 +139,7 @@ height = 240.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_jva71"]
 radius = 27.01839
 
-[node name="Node2D" type="Node2D" unique_id=1753384981]
+[node name="Node2D2" type="Node2D" unique_id=1753384981]
 script = ExtResource("1_irbir")
 
 [node name="fourWayRoom2" type="StaticBody2D" parent="." unique_id=1860591980]
@@ -217,3 +217,24 @@ texture = ExtResource("6_7mycd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball" unique_id=1716989450]
 shape = SubResource("CircleShape2D_jva71")
+
+[node name="Timer" type="Timer" parent="ball" unique_id=1131638423]
+wait_time = 0.1
+one_shot = true
+
+[node name="enemy" type="CharacterBody2D" parent="." unique_id=362002902]
+script = ExtResource("8_17ygw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemy" unique_id=1863435833]
+position = Vector2(-2042, 815)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_o7hox")
+animation = &"front walk"
+frame = 3
+frame_progress = 0.37457708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=1369197734]
+position = Vector2(-2034, 852)
+shape = SubResource("CapsuleShape2D_o7hox")
+
+[connection signal="timeout" from="ball/Timer" to="ball" method="_on_timer_timeout"]

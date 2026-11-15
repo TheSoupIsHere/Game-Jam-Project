@@ -15,4 +15,3 @@ func _physics_process(delta: float):
 		
 		if collider.is_in_group("Player"):
 			print("DEAD")
-	
