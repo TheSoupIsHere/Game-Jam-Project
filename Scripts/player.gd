@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @onready var sprint_cd = $"sprint cd"
 @onready var _animation_player = $ani
+@onready var triggerbox = $PlayerTriggerbox
 
 var speed = 1000
 var stamina = 100
