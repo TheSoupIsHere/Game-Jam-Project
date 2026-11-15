@@ -3,7 +3,131 @@
 [ext_resource type="Script" uid="uid://5aeo2hq42o0j" path="res://Scripts/player.gd" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://df50rbpfmmd07" path="res://Scenes/animated_sprite_2d.tscn" id="2_jjvhh"]
 [ext_resource type="Script" uid="uid://bu0l5uyvq8y5g" path="res://Scripts/map_loader.gd" id="3_8gbba"]
+[ext_resource type="Script" uid="uid://pa58vay3b503" path="res://Scripts/roomcontrol.gd" id="3_u50mg"]
+[ext_resource type="Texture2D" uid="uid://chk7qxr45lswy" path="res://art folder/Woofly front.png" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cdgm0ordko5c5" path="res://art folder/woofly front walk/Woofly_Front-2.png" id="4_3pmx8"]
 [ext_resource type="PackedScene" uid="uid://dt8kef72lwm80" path="res://Scenes/rooms.tscn" id="5_kry3j"]
+[ext_resource type="Texture2D" uid="uid://dfff8pf0jwjey" path="res://art folder/woofly front walk/Woofly_Front-3.png" id="5_u50mg"]
+[ext_resource type="Texture2D" uid="uid://b5k2fyo65gmey" path="res://art folder/woofly front walk/Woofly_Front-1 2.png" id="6_3pmx8"]
+[ext_resource type="Texture2D" uid="uid://3sumhetg1cw5" path="res://art folder/Woofly left.png" id="7_1w6v2"]
+[ext_resource type="Texture2D" uid="uid://b6xypcv3e84er" path="res://art folder/woofly left walk/Woofly_Left-1.png" id="8_ueoa1"]
+[ext_resource type="Texture2D" uid="uid://c78wt6ocljqce" path="res://art folder/woofly front walk/Woofly_Front-4 2.png" id="9_u50mg"]
+[ext_resource type="Texture2D" uid="uid://x6vq787yd67g" path="res://art folder/woofly left walk/Woofly_Left-4.png" id="11_hpc6h"]
+[ext_resource type="Texture2D" uid="uid://d3ijmvf7cay4h" path="res://art folder/woofly left walk/Woofly_Left-2 2.png" id="12_cbgmd"]
+[ext_resource type="Texture2D" uid="uid://bjp70rnqv8pib" path="res://art folder/Woofly right.png" id="12_kltya"]
+[ext_resource type="Texture2D" uid="uid://bjqbps0vwk68l" path="res://art folder/woofly left walk/Woofly_Left-3 2.png" id="13_1w6v2"]
+[ext_resource type="Texture2D" uid="uid://cvdu3vdicfyb5" path="res://art folder/woofly right walk/Woofly_Right-3.png" id="15_r33sp"]
+[ext_resource type="Texture2D" uid="uid://b46770je4xnpg" path="res://art folder/woofly right walk/Woofly_Right-1 2.png" id="16_ueoa1"]
+[ext_resource type="Texture2D" uid="uid://c76bahqayocbb" path="res://art folder/woofly right walk/Woofly_Right-2 2.png" id="17_6vcvc"]
+[ext_resource type="Texture2D" uid="uid://ongsxennnifw" path="res://art folder/Woofly back.png" id="17_jwpg7"]
+[ext_resource type="Texture2D" uid="uid://btfrj6728n8r0" path="res://art folder/woofly right walk/Woofly_Right-4 2.png" id="19_7k868"]
+[ext_resource type="Texture2D" uid="uid://1hahb66m08rs" path="res://art folder/woofly back walk/Woofly_Back-2.png" id="19_536cc"]
+[ext_resource type="Texture2D" uid="uid://847oygqfivs7" path="res://art folder/woofly back walk/Woofly_Back-3.png" id="20_aqgau"]
+[ext_resource type="Texture2D" uid="uid://dyg4ud3grckec" path="res://art folder/woofly back walk/Woofly_Back-1 2.png" id="21_hpc6h"]
+[ext_resource type="Texture2D" uid="uid://b07b1tak4peth" path="res://art folder/woofly back walk/Woofly_Back-4 2.png" id="24_kltya"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7xmqa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_1bvp3")
+}],
+"loop": 1,
+"name": &"Down Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_3pmx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3pmx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u50mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u50mg")
+}],
+"loop": 1,
+"name": &"Down Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1w6v2")
+}],
+"loop": 1,
+"name": &"Left Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ueoa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cbgmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1w6v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hpc6h")
+}],
+"loop": 1,
+"name": &"Left Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_kltya")
+}],
+"loop": 1,
+"name": &"Right Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ueoa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6vcvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_r33sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7k868")
+}],
+"loop": 1,
+"name": &"Right Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_jwpg7")
+}],
+"loop": 1,
+"name": &"Up Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_hpc6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_536cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_aqgau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_kltya")
+}],
+"loop": 1,
+"name": &"Up Walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jva71"]
 radius = 30.338379
@@ -14,16 +138,20 @@ script = ExtResource("3_8gbba")
 
 [node name="Node2D" parent="." unique_id=1784317243 instance=ExtResource("5_kry3j")]
 position = Vector2(-2064, -2011)
+script = ExtResource("3_u50mg")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=796931992]
 position = Vector2(-791.99994, 991.9999)
 scale = Vector2(2.571, 2)
 motion_mode = 1
-safe_margin = 2.45
+wall_min_slide_angle = 0.0
+safe_margin = 0.001
 script = ExtResource("2_h2yge")
 
 [node name="ani" parent="Player" unique_id=361740621 instance=ExtResource("2_jjvhh")]
-position = Vector2(-4.66745, -28.999939)
+position = Vector2(-4.667474, -28.999939)
+sprite_frames = SubResource("SpriteFrames_7xmqa")
+frame_progress = 0.0
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="Player" unique_id=1680076149]
 position = Vector2(-1.5558385, -16.999939)
@@ -32,9 +160,6 @@ shape = SubResource("CapsuleShape2D_jva71")
 [node name="sprint cd" type="Timer" parent="Player" unique_id=1585222181]
 wait_time = 3.0
 one_shot = true
-
-[node name="Map Loader" type="Node2D" parent="." unique_id=112547903]
-script = ExtResource("3_8gbba")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=2092588428]
 zoom = Vector2(0.15, 0.15)
