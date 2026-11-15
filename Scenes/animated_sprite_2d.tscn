@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://df50rbpfmmd07"]
+
+[ext_resource type="Texture2D" uid="uid://chk7qxr45lswy" path="res://art folder/Woofly front.png" id="1_jfxqs"]
+[ext_resource type="Texture2D" uid="uid://pn3mmdhnfjv2" path="res://art folder/woofly front walk/Woofly_Front-1.png" id="2_3m2wa"]
+[ext_resource type="Texture2D" uid="uid://b3yqwj1mfnhsq" path="res://art folder/woofly front walk/Woofly_Front-2.png" id="3_jyrly"]
+[ext_resource type="Texture2D" uid="uid://c21wr8rfpvle4" path="res://art folder/woofly front walk/Woofly_Front-3.png" id="4_vd7vl"]
+[ext_resource type="Texture2D" uid="uid://ds85j74t22iet" path="res://art folder/woofly front walk/Woofly_Front-4.png" id="5_p508k"]
+[ext_resource type="Texture2D" uid="uid://3sumhetg1cw5" path="res://art folder/Woofly left.png" id="6_3ar0t"]
+[ext_resource type="Texture2D" uid="uid://ckhimopwgmrtx" path="res://art folder/woofly left walk/Woofly_Left-1.png" id="7_0kemu"]
+[ext_resource type="Texture2D" uid="uid://cjxtm2rlmi6k" path="res://art folder/woofly left walk/Woofly_Left-2.png" id="8_42lkt"]
+[ext_resource type="Texture2D" uid="uid://uuohn2ki10or" path="res://art folder/woofly left walk/Woofly_Left-3.png" id="9_xxg20"]
+[ext_resource type="Texture2D" uid="uid://18rrtuymp6p6" path="res://art folder/woofly left walk/Woofly_Left-4.png" id="10_6ew7s"]
+[ext_resource type="Texture2D" uid="uid://bjp70rnqv8pib" path="res://art folder/Woofly right.png" id="11_5wfmc"]
+[ext_resource type="Texture2D" uid="uid://wds5pu3v571c" path="res://art folder/woofly right walk/Woofly_Right-1.png" id="12_am1hh"]
+[ext_resource type="Texture2D" uid="uid://c6ydsrttgve8i" path="res://art folder/woofly right walk/Woofly_Right-2.png" id="13_j2820"]
+[ext_resource type="Texture2D" uid="uid://cow8m6rtk2c1v" path="res://art folder/woofly right walk/Woofly_Right-3.png" id="14_x25pr"]
+[ext_resource type="Texture2D" uid="uid://d4eyf603d8hsk" path="res://art folder/woofly right walk/Woofly_Right-4.png" id="15_nqlko"]
+[ext_resource type="Texture2D" uid="uid://ongsxennnifw" path="res://art folder/Woofly back.png" id="16_y61bn"]
+[ext_resource type="Texture2D" uid="uid://bn4qqi2cgxq6c" path="res://art folder/woofly back walk/Woofly_Back-1.png" id="17_bgjk7"]
+[ext_resource type="Texture2D" uid="uid://djh0ufs5klkwi" path="res://art folder/woofly back walk/Woofly_Back-2.png" id="18_ee0hg"]
+[ext_resource type="Texture2D" uid="uid://b4cds3x1horbt" path="res://art folder/woofly back walk/Woofly_Back-3.png" id="19_ohyb5"]
+[ext_resource type="Texture2D" uid="uid://b4c6h0p3vtsbl" path="res://art folder/woofly back walk/Woofly_Back-4.png" id="20_x4onu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1u5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jfxqs")
+}],
+"loop": 1,
+"name": &"Down Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3m2wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jyrly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vd7vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p508k")
+}],
+"loop": 1,
+"name": &"Down Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_3ar0t")
+}],
+"loop": 1,
+"name": &"Left Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_0kemu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_42lkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xxg20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6ew7s")
+}],
+"loop": 1,
+"name": &"Left Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_5wfmc")
+}],
+"loop": 1,
+"name": &"Right Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_am1hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j2820")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_x25pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nqlko")
+}],
+"loop": 1,
+"name": &"Right Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_y61bn")
+}],
+"loop": 1,
+"name": &"Up Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_bgjk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ee0hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ohyb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_x4onu")
+}],
+"loop": 1,
+"name": &"Up Walk",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=361740621]
+scale = Vector2(0.13, 0.15999998)
+sprite_frames = SubResource("SpriteFrames_v1u5u")
+animation = &"Up Walk"
+frame_progress = 0.9700517
