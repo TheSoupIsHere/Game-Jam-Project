@@ -23,6 +23,89 @@
 [ext_resource type="Texture2D" uid="uid://d0bi6kkiim3bl" path="res://art folder/woofly idles/Woofly_Idle-1-2.png" id="22_u50mg"]
 [ext_resource type="Texture2D" uid="uid://b07b1tak4peth" path="res://art folder/woofly back walk/Woofly_Back-4 2.png" id="24_kltya"]
 
+[sub_resource type="GDScript" id="GDScript_ee4r6"]
+script/source = "extends Node2D
+
+const ROOM_EXITS: Array[String] = [
+	\"UDLR\", \"ULR\", \"UDL\", \"DLR\", \"UDR\",
+	\"UL\", \"DL\", \"DR\", \"UR\", \"U\", \"L\", \"D\", \"R\"
+]
+
+var rooms: Array[Room] = [$\"UDLR_Room\",
+						  $\"ULR_Room\", $\"UDL_Room\", $\"DLR_Room\", $\"UDR_Room\", 
+						  $\"UL_Room\", $\"DL_Room\", $\"DR_Room\", $\"UR_Room\", 
+						  $\"U_Room\", $\"L_Room\", $\"D_Room\", $\"R_Room\"]
+
+var showing_room = 0
+var north: bool = false
+var south: bool = false
+var west: bool = false
+var east: bool = false
+
+func show_room(room_num: int):
+	for num in range(len(rooms)):
+		if num != room_num:
+			rooms[num].visible = false
+		else:
+			rooms[num].visible = true
+
+func _ready() -> void:
+	show_room(showing_room)
+
+func _process(delta: float) -> void:
+	var next : bool = Input.is_action_just_pressed(\"Next Room\")
+	#if next:
+		#print(\"next room triggered\")
+		#showing_room = (showing_room + 1) % len(rooms)
+		#show_room(showing_room)
+		#self.position
+
+func _transition_through_exit(body: Node2D, exit_direction: String, spawn_name: String) -> bool:
+	if not body.is_in_group(\"Player\"):
+		return false
+
+	var entry_direction: String
+	match exit_direction:
+		\"U\":
+			entry_direction = \"D\"
+		\"D\":
+			entry_direction = \"U\"
+		\"L\":
+			entry_direction = \"R\"
+		\"R\":
+			entry_direction = \"L\"
+
+	var matching_rooms: Array[int] = []
+	for room_index in range(ROOM_EXITS.size()):
+		if room_index != showing_room and ROOM_EXITS[room_index].contains(entry_direction):
+			matching_rooms.append(room_index)
+
+	if matching_rooms.is_empty():
+		push_error(\"No room variant has an entrance on side %s\" % entry_direction)
+		return false
+
+	showing_room = matching_rooms[randi_range(0, matching_rooms.size() - 1)]
+	show_room(showing_room)
+	body.global_position = get_node(spawn_name).global_position
+	return true
+
+func _on_north_collider_body_entered(body: Node2D) -> void:
+	if _transition_through_exit(body, \"U\", \"South Spawn\"):
+		north = true
+
+func _on_south_collider_body_entered(body: Node2D) -> void:
+	if _transition_through_exit(body, \"D\", \"North Spawn\"):
+		south = true
+
+func _on_west_collider_body_entered(body: Node2D) -> void:
+	if _transition_through_exit(body, \"L\", \"East Spawn\"):
+		west = true
+
+func _on_east_collider_body_entered(body: Node2D) -> void:
+	if _transition_through_exit(body, \"R\", \"West Spawn\"):
+		east = true
+"
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7xmqa"]
 animations = [{
 "frames": [{
@@ -120,6 +203,7 @@ script = ExtResource("3_8gbba")
 
 [node name="Room Node" parent="." unique_id=1784317243 instance=ExtResource("5_kry3j")]
 position = Vector2(-2064, -2011)
+script = SubResource("GDScript_ee4r6")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=796931992 groups=["Player"]]
 position = Vector2(2.999878, 14.000061)

@@ -23,6 +23,8 @@ func _physics_process(delta):
 	elif Global.input_dir.y > 0:
 		_animation_player.play("Down Walk")
 		
+	
+		
 	var is_shift : bool = Input.is_action_pressed("Shift")
 	
 	if is_shift and stamina > 0 and not sprint_disabled:

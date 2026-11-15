@@ -15,4 +15,4 @@ func disable_all_shapes(target_node: Node) -> void:
 func enable_all_shapes(target_node: Node) -> void:
 	for child in target_node.find_children("*", "", true, false):
 		if child is CollisionShape2D or child is CollisionPolygon2D:
-			child.set_deferred("enabled", true)
+			child.set_deferred("disabled", false)
