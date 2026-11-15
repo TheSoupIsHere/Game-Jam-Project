@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://847oygqfivs7" path="res://art folder/woofly back walk/Woofly_Back-3.png" id="20_aqgau"]
 [ext_resource type="Texture2D" uid="uid://dyg4ud3grckec" path="res://art folder/woofly back walk/Woofly_Back-1 2.png" id="21_hpc6h"]
 [ext_resource type="Texture2D" uid="uid://b07b1tak4peth" path="res://art folder/woofly back walk/Woofly_Back-4 2.png" id="24_kltya"]
+[ext_resource type="Script" uid="uid://dby6unqk4o6i4" path="res://Scripts/enemy.gd" id="26_1w6v2"]
+[ext_resource type="Texture2D" uid="uid://bgwaojf6hqbg" path="res://art folder/guard front walk/Guard_Front-2.png" id="27_ueoa1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7xmqa"]
 animations = [{
@@ -133,6 +135,10 @@ animations = [{
 radius = 30.338379
 height = 169.00006
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6vcvc"]
+radius = 136.0
+height = 530.0
+
 [node name="Node2D" type="Node2D" unique_id=1753384981]
 script = ExtResource("3_8gbba")
 
@@ -163,5 +169,18 @@ one_shot = true
 
 [node name="Camera" type="Camera2D" parent="." unique_id=2092588428]
 zoom = Vector2(0.15, 0.15)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=575818984]
+position = Vector2(-601, 280)
+rotation = -3.1415925
+script = ExtResource("26_1w6v2")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=435445130]
+rotation = 3.1415927
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("27_ueoa1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2015724151]
+shape = SubResource("CapsuleShape2D_6vcvc")
 
 [connection signal="timeout" from="Player/sprint cd" to="Player" method="_on_sprint_cd_timeout"]
